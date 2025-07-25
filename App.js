@@ -1,28 +1,50 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import HeaderComponent from "./src/components/Header";
+import BodyComponent from "./src/components/Body";
+import FooterComponent from "./src/components/Footer";
 
-// Using JSX
-const Logo = () => (
-  <div className="logo-wrapper">
-    <img src="https://picsum.photos/200/300" alt="Random" />
-  </div>
-);
-const SearchBar = () => (
-  <div className="search-wrapper">
-    <input type="text" placeholder="Search..."></input>
-  </div>
-);
-const UserIcon = () => (
-  <div className="user-icon-wrapper">
-    <img src="https://picsum.photos/200/300" alt="Random" />
-  </div>
-);
-const Heading = () => (
-  <div id="header">
-    {Logo()}
-    <SearchBar />
-    <UserIcon></UserIcon>
-  </div>
-);
+/** Food Delivery Website Components
+ * Header
+ *  - Logo
+ *  - Navigation Menu
+ * Body
+ *  - Tagline
+ *  - Search
+ *      - Location Dropdown
+ *      - Search Text
+ *  - Offer Crousel
+ *      - Offer Name
+ *      - Discount
+ *  - Dishes Crousel
+ *      - Dish Image
+ *      - Dish name
+ *      - Hyper link
+ *  - Best Restaurent Crousel
+ *    - Heading
+ *      - Image
+ *      - Rating
+ *      - Type of food
+ *      - Address
+ *      - Cost for two
+ *
+ *  - Cities With Food deliver
+ *    - Heading
+ *      - City name with some text & hyper link
+ * Footer
+ *  - Coyyright
+ *  - Contact us
+ *  - Term and conditions
+ * */
+
+const AppComponent = () => {
+  return (
+    <div>
+      <HeaderComponent />
+      <BodyComponent />
+      <FooterComponent />
+    </div>
+  );
+};
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<Heading />);
+root.render(<AppComponent />);
